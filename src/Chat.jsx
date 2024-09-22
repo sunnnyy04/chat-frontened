@@ -23,7 +23,7 @@ function Chat() {
     connectToWs();
   }, []);
   function connectToWs(){
-    const ws = new WebSocket('wss://localhost:4000');
+    const ws = new WebSocket('wss://chat-backened.onrender.com/');
     setWs(ws);
     ws.addEventListener('message', handleMessage);
     ws.addEventListener('close', () =>{
